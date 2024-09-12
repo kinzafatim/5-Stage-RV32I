@@ -124,7 +124,7 @@ To run the processor simulation, clone the repository and use the following comm
 
 ```sh
 git clone https://github.com/kinzafatim/5-stage-RV32I.git
-cd 5-stage-pipeline-RV32I
+cd 5-stage-RV32I
 sbt test
 ```
 
