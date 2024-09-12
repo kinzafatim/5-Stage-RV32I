@@ -1,3 +1,7 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly Pipeline.TOPTest -- -DwriteVcd=1, Some(ea275873-987f-481b-8beb-c3705d2a9103), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/kinzaa/Desktop/5-Stage-RV32I/target/scala-2.12/classes ...[0m
 [0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-Stage-RV32I/src/main/scala/Pipeline/Main.scala:311:43: overloaded method value is with alternatives:[0m
 [0m[[0m[31merror[0m] [0m[0m  (v: chisel3.Bool,vr: chisel3.Bool*)(block: => Any)chisel3.util.SwitchContext[chisel3.Bool] <and>[0m
 [0m[[0m[31merror[0m] [0m[0m  (v: chisel3.Bool)(block: => Any)chisel3.util.SwitchContext[chisel3.Bool] <and>[0m
@@ -6,3 +10,6 @@
 [0m[[0m[31merror[0m] [0m[0m    switch(MEM_WB_M.io.MEMWB_memToReg_out){[0m
 [0m[[0m[31merror[0m] [0m[0m                                          ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed Sep 12, 2024, 5:39:23 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

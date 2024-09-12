@@ -1,28 +1,28 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
 [0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 48 products, 32 sources, 4 libraries[0m
-[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/Pipeline/UNits/BRANCH.scala, ${BASE}/src/main/scala/Pipeline/Pipelines/ID_EX.scala, ${BASE}/src/main/scala/Pipeline/Memory/INSTRmem.scala, ${BASE}/src/main/scala/Pipeline/UNits/PC.scala, ${BASE}/src/main/scala/Pipeline/Memory/DATAmem.scala, ${BASE}/src/main/scala/Pipeline/Pipelines/MEM_WB.scala, ${BASE}/src/main/scala/Pipeline/Hazard Units/BRANCHforward.scala, ${BASE}/src/main/scala/Pipeline/UNits/JALR.scala, ${BASE}/src/main/scala/Pipeline/UNits/Alu.scala, ${BASE}/src/main/scala/Pipeline/UNits/CONTROL.scala, ${BASE}/src/main/scala/gcd/GCD.scala, ${BASE}/src/main/scala/Pipeline/Hazard Units/STRUCTURALhazard.scala, ${BASE}/src/main/scala/Pipeline/Hazard Units/FORWARDdata.scala, ${BASE}/src/main/scala/Pipeline/Hazard Units/HAZARDdetection.scala, ${BASE}/src/main/scala/Pipeline/UNits/ImmGenerator.scala, ${BASE}/src/main/scala/Pipeline/Pipelines/EX_MEM.scala, ${BASE}/src/main/scala/Pipeline/TOP.scala, ${BASE}/src/main/scala/gcd/DecoupledGCD.scala, ${BASE}/src/main/scala/Pipeline/UNits/PC4.scala, ${BASE}/src/main/scala/Pipeline/UNits/Alu_Control.scala, ${BASE}/src/main/scala/Pipeline/UNits/RegisterFile.scala, ${BASE}/src/main/scala/Pipeline/Pipelines/IFI_D.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(${BASE}/src/main/scala/pipeline/Top.scala, ${BASE}/src/main/scala/pipeline/fofo.scala, ${BASE}/src/main/scala/pipeline/fo.scala, ${BASE}/src/main/scala/pipeline/ff.scala, ${BASE}/src/main/scala/pipeline/Topfile.scala, ${BASE}/src/main/scala/pipeline/try.scala, ${BASE}/src/main/scala/pipeline/HazardDetectionUnit.scala, ${BASE}/src/main/scala/pipeline/new.scala, ${BASE}/src/main/scala/pipeline/RV32I.scala, ${BASE}/src/main/scala/pipeline/exxxx.scala), changed = Set(${BASE}/src/main/scala/Pipeline/UNits/CONTROL.scala, ${BASE}/src/main/scala/Pipeline/TOP.scala), unmodified = ...),Set(),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/Pipeline/UNits/BRANCH.scala, ${BASE}/src/main/scala/Pipeline/Pipelines/ID_EX.scala, ${BASE}/src/main/scala/Pipeline/Memory/INSTRmem.scala, ${BASE}/src/main/scala/Pipeline/UNits/PC.scala, ${BASE}/src/main/scala/Pipeline/Memory/DATAmem.scala, ${BASE}/src/main/scala/Pipeline/Pipelines/MEM_WB.scala, ${BASE}/src/main/scala/Pipeline/Hazard Units/BRANCHforward.scala, ${BASE}/src/main/scala/Pipeline/UNits/JALR.scala, ${BASE}/src/main/scala/Pipeline/UNits/Alu.scala, ${BASE}/src/main/scala/Pipeline/UNits/CONTROL.scala, ${BASE}/src/main/scala/gcd/GCD.scala, ${BASE}/src/main/scala/Pipeline/Hazard Units/STRUCTURALhazard.scala, ${BASE}/src/main/scala/Pipeline/Hazard Units/FORWARDdata.scala, ${BASE}/src/main/scala/Pipeline/Hazard Units/HAZARDdetection.scala, ${BASE}/src/main/scala/Pipeline/Main.scala, ${BASE}/src/main/scala/Pipeline/UNits/ImmGenerator.scala, ${BASE}/src/main/scala/Pipeline/Pipelines/EX_MEM.scala, ${BASE}/src/main/scala/gcd/DecoupledGCD.scala, ${BASE}/src/main/scala/Pipeline/UNits/PC4.scala, ${BASE}/src/main/scala/Pipeline/UNits/Alu_Control.scala, ${BASE}/src/main/scala/Pipeline/UNits/RegisterFile.scala, ${BASE}/src/main/scala/Pipeline/Pipelines/IFI_D.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(${BASE}/src/main/scala/pipeline/Top.scala, ${BASE}/src/main/scala/pipeline/fofo.scala, ${BASE}/src/main/scala/pipeline/fo.scala, ${BASE}/src/main/scala/pipeline/ff.scala, ${BASE}/src/main/scala/pipeline/Topfile.scala, ${BASE}/src/main/scala/pipeline/try.scala, ${BASE}/src/main/scala/pipeline/HazardDetectionUnit.scala, ${BASE}/src/main/scala/pipeline/new.scala, ${BASE}/src/main/scala/pipeline/RV32I.scala, ${BASE}/src/main/scala/pipeline/exxxx.scala), changed = Set(${BASE}/src/main/scala/Pipeline/Main.scala), unmodified = ...),Set(),Set(),API Changes: Set())[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed: Set(${BASE}/src/main/scala/pipeline/ff.scala, ${BASE}/src/main/scala/pipeline/RV32I.scala, ${BASE}/src/main/scala/pipeline/Top.scala, ${BASE}/src/main/scala/pipeline/new.scala, ${BASE}/src/main/scala/pipeline/exxxx.scala, ${BASE}/src/main/scala/pipeline/Topfile.scala, ${BASE}/src/main/scala/pipeline/HazardDetectionUnit.scala, ${BASE}/src/main/scala/pipeline/try.scala, ${BASE}/src/main/scala/pipeline/fofo.scala, ${BASE}/src/main/scala/pipeline/fo.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/Pipeline/UNits/CONTROL.scala, ${BASE}/src/main/scala/Pipeline/TOP.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/Pipeline/Main.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(Pipeline.PIPELINE, Pipeline.Control)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(Pipeline.PIPELINE)[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(Pipeline.PIPELINE, Pipeline.Control)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/Pipeline/UNits/CONTROL.scala, ${BASE}/src/main/scala/Pipeline/TOP.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Pipeline.PIPELINE, Pipeline.Control[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(Pipeline.PIPELINE)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/Pipeline/Main.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Pipeline.PIPELINE[0m
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /home/kinzaa/Desktop/5-Stage-RV32I/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/kinzaa/Desktop/5-Stage-RV32I/target/scala-2.12/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.4.4:compile for Scala 2.12.13[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 37654b12 for Scala compiler version 2.12.13[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 1fb68dd9 for Scala compiler version 2.12.13[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-Xsource:2.11[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-language:reflectiveCalls[0m
@@ -42,5 +42,5 @@
 [0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 27.347131929 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 3.62739943 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m

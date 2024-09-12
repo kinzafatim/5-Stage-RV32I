@@ -1,7 +1,7 @@
 [
   {
     "class":"firrtl.stage.FirrtlFileAnnotation",
-    "file":"test_run_dir/TOPTest_test/PIPELINE.lo.fir"
+    "file":"test_run_dir/5Stage_test/PIPELINE.lo.fir"
   },
   {
     "class":"firrtl.EmitCircuitAnnotation",
@@ -52,6 +52,6 @@
   },
   {
     "class":"firrtl.transforms.BlackBoxTargetDirAnno",
-    "targetDir":"test_run_dir/TOPTest_test"
+    "targetDir":"test_run_dir/5Stage_test"
   }
 ]

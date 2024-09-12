@@ -1,13 +1,13 @@
 package Pipeline
-
 import chisel3._
 import org.scalatest.FreeSpec
 import chiseltest._
 
 class TOPTest extends FreeSpec with ChiselScalatestTester{
-   "TOPTest test" in{
-       test(new PIPELINE ()){c =>
-         c.clock.step(200) 
+   "5-Stage test" in{
+    test(new PIPELINE){
+        x =>
+        x.clock.step(200) 
        }
    }
 }

@@ -30,9 +30,7 @@ class PIPELINE extends Module {
     val HazardDetect = Module(new HazardDetection)
     val Branch_Forward = Module(new BranchForward)
     val Structural = Module(new StructuralHazard)
-    
-    val d = Wire(SInt(32.W))
-    
+
     // FETCH
     val PC_F = MuxLookup (HazardDetect.io.pc_forward, 0.S, Array (
         (0.U) -> PC4.io.out.asSInt,
@@ -49,17 +47,21 @@ class PIPELINE extends Module {
     val Instruction_F = MuxLookup (HazardDetect.io.inst_forward, 0.U, Array (
         (0.U) -> InstMemory.io.data,
         (1.U) -> HazardDetect.io.inst_out))
-    
-    
+
+
     // IF_ID PIPELINE
     IF_ID_M.io.pc_in := PC.io.out
     IF_ID_M.io.pc4_in := PC4.io.out
     IF_ID_M.io.mux_f_pc_in := PC_for
     IF_ID_M.io.mux_g_inst_in := Instruction_F
-    
-    // DECODE
+        
+        //immGenerator Inputs
+    ImmGen.io.instr := IF_ID_M.io.mux_g_inst_out
     ImmGen.io.pc := IF_ID_M.io.mux_f_pc_out.asUInt
+    // DECODE
+    
     control_module.io.opcode := IF_ID_M.io.mux_g_inst_out(6, 0)
+    // Registerfile inputs
     RegFile.io.rs1 := Mux(
     control_module.io.opcode === 51.U || 
     control_module.io.opcode === 19.U || 
@@ -68,33 +70,47 @@ class PIPELINE extends Module {
     control_module.io.opcode === 99.U || 
     control_module.io.opcode === 103.U, 
     IF_ID_M.io.mux_g_inst_out(19, 15), 0.U )
+    
     RegFile.io.rs2 := Mux(
     control_module.io.opcode === 51.U || 
     control_module.io.opcode === 35.U || 
     control_module.io.opcode === 99.U,
-     IF_ID_M.io.mux_g_inst_out(24, 20), 0.U)
-
-    ImmGen.io.instr := IF_ID_M.io.mux_g_inst_out
-    
+    IF_ID_M.io.mux_g_inst_out(24, 20), 0.U)
     RegFile.io.reg_write := control_module.io.reg_write 
     
     val ImmValue = MuxLookup (control_module.io.extend, 0.S, Array (
         (0.U) -> ImmGen.io.I_type,
         (1.U) -> ImmGen.io.S_type,
         (2.U) -> ImmGen.io.U_type))
-    
+    // Structural hazard inputs
     Structural.io.rs1 := IF_ID_M.io.mux_g_inst_out(19, 15)
     Structural.io.rs2 := IF_ID_M.io.mux_g_inst_out(24, 20)
     Structural.io.MEM_WB_regWr := MEM_WB_M.io.EXMEM_REG_W
     Structural.io.MEM_WB_Rd := MEM_WB_M.io.MEMWB_rd_out
-    
-    ID_EX_M.io.rs1_data_in := MuxLookup (Structural.io.fwd_rs1, 0.S, Array (
-        (0.U) -> RegFile.io.rdata1,
-        (1.U) -> RegFile.io.w_data))
-    
-    ID_EX_M.io.rs2_data_in := MuxLookup (Structural.io.fwd_rs2, 0.S, Array (
-        (0.U) -> RegFile.io.rdata2,
-        (1.U) -> RegFile.io.w_data))
+   
+    val S_rs1DataIn = Wire(SInt(32.W)) 
+    val S_rs2DataIn = Wire(SInt(32.W))
+
+    //  rs1_data
+    when (Structural.io.fwd_rs1 === 0.U) {
+      S_rs1DataIn := RegFile.io.rdata1
+    }.elsewhen (Structural.io.fwd_rs1 === 1.U) {
+      S_rs1DataIn := RegFile.io.w_data
+    }.otherwise {
+      S_rs1DataIn := 0.S 
+    }
+
+    // rs2_data
+    when (Structural.io.fwd_rs2 === 0.U) {
+      S_rs2DataIn := RegFile.io.rdata2
+    }.elsewhen (Structural.io.fwd_rs2 === 1.U) {
+      S_rs2DataIn := RegFile.io.w_data
+    }.otherwise {
+      S_rs2DataIn := 0.S
+    }
+    //ID_EX_M inputs
+    ID_EX_M.io.rs1_data_in := S_rs1DataIn
+    ID_EX_M.io.rs2_data_in := S_rs2DataIn
     
     when(HazardDetect.io.ctrl_forward === "b1".U) {
         ID_EX_M.io.ctrl_MemWr_in := 0.U
@@ -115,7 +131,7 @@ class PIPELINE extends Module {
         ID_EX_M.io.ctrl_Branch_in := control_module.io.branch
         ID_EX_M.io.ctrl_nextpc_in := control_module.io.next_pc_sel
     }
-    
+    // Hazard detection inputs
     HazardDetect.io.IF_ID_inst := IF_ID_M.io.mux_g_inst_out
     HazardDetect.io.ID_EX_memRead := ID_EX_M.io.ctrl_MemRd_out
     HazardDetect.io.ID_EX_rd := ID_EX_M.io.rd_out
@@ -123,7 +139,7 @@ class PIPELINE extends Module {
     HazardDetect.io.current_pc := IF_ID_M.io.mux_f_pc_out
     
     MEM_WB_M.io.EXMEM_MEMRD := EX_MEM_M.io.EXMEM_memRd_out
-    
+        // Branch forward inputs
     Branch_Forward.io.ID_EX_RD := ID_EX_M.io.rd_out
     Branch_Forward.io.EX_MEM_RD := EX_MEM_M.io.EXMEM_rd_out 
     Branch_Forward.io.MEM_WB_RD := MEM_WB_M.io.MEMWB_rd_out
@@ -133,7 +149,7 @@ class PIPELINE extends Module {
     Branch_Forward.io.rs1 := IF_ID_M.io.mux_g_inst_out(19, 15)
     Branch_Forward.io.rs2 := IF_ID_M.io.mux_g_inst_out(24, 20)
     Branch_Forward.io.ctrl_branch := control_module.io.branch
-    
+        // Branch X
     Branch_M.io.arg_x := MuxLookup (Branch_Forward.io.forward_rs1, 0.S, Array (
         (0.U) -> RegFile.io.rdata1,
         (1.U) -> ALU.io.out, 
@@ -162,7 +178,7 @@ class PIPELINE extends Module {
         (10.U) -> RegFile.io.w_data.asUInt))
     
     JALR.io.imme := ImmValue.asUInt
-    
+        // Branch Y
     Branch_M.io.arg_y := MuxLookup (Branch_Forward.io.forward_rs2, 0.S, Array (
         (0.U) -> RegFile.io.rdata2,
         (1.U) -> ALU.io.out, 
@@ -203,8 +219,6 @@ class PIPELINE extends Module {
             PC.io.in := PC4.io.out.asSInt
         }
     }
-    
-    
     // ID_EX PIPELINE
     ID_EX_M.io.rs1_in := RegFile.io.rs1
     ID_EX_M.io.rs2_in := RegFile.io.rs2
@@ -214,7 +228,7 @@ class PIPELINE extends Module {
     ID_EX_M.io.rd_in := IF_ID_M.io.mux_g_inst_out(11, 7)
     
     
-    // EXECUTION
+    // Forwarding Inputs
     Forwarding.io.IDEX_rs1 := ID_EX_M.io.rs1_out
     Forwarding.io.IDEX_rs2 := ID_EX_M.io.rs2_out
     Forwarding.io.EXMEM_rd := EX_MEM_M.io.EXMEM_rd_out
@@ -224,10 +238,12 @@ class PIPELINE extends Module {
     
     ID_EX_M.io.ctrl_OpA_in := control_module.io.operand_A
     ID_EX_M.io.IFID_pc4_in := IF_ID_M.io.pc4_out
-    
+    val d = Wire(SInt(32.W))
+
     when (ID_EX_M.io.ctrl_OpA_out === "b01".U) {
         ALU.io.in_A := ID_EX_M.io.IFID_pc4_out.asSInt
     }.otherwise {
+        // forwarding A
         when(Forwarding.io.forward_a === "b00".U) {
             ALU.io.in_A := ID_EX_M.io.rs1_data_out
         }.elsewhen(Forwarding.io.forward_a === "b01".U) {
@@ -238,15 +254,22 @@ class PIPELINE extends Module {
             ALU.io.in_A := ID_EX_M.io.rs1_data_out
         }
       }
-  
-    val RS2_value = MuxLookup (Forwarding.io.forward_b, 0.S, Array (
-        (0.U) -> ID_EX_M.io.rs2_data_out,
-        (1.U) -> d,
-        (2.U) -> EX_MEM_M.io.EXMEM_alu_out))
-  
-    ALU.io.in_B := MuxLookup (ID_EX_M.io.ctrl_OpB_out, 0.S, Array (
-        (0.U) -> RS2_value,
-        (1.U) -> ID_EX_M.io.imm_out ))
+        // forwarding B
+    val RS2_value = Wire(SInt(32.W)) 
+    when (Forwarding.io.forward_b === 0.U) {
+      RS2_value := ID_EX_M.io.rs2_data_out
+    }.elsewhen (Forwarding.io.forward_b === 1.U) {
+      RS2_value := d
+    }.elsewhen (Forwarding.io.forward_b === 2.U) {
+      RS2_value := EX_MEM_M.io.EXMEM_alu_out
+    }.otherwise {
+      RS2_value := 0.S
+    }
+    when (ID_EX_M.io.ctrl_OpB_out === 0.U) {
+      ALU.io.in_B := RS2_value
+    }.otherwise {
+      ALU.io.in_B := ID_EX_M.io.imm_out
+    }
   
     ALU_Control.io.aluOp := ID_EX_M.io.ctrl_AluOp_out 
   
@@ -254,8 +277,7 @@ class PIPELINE extends Module {
     ALU_Control.io.func7 := ID_EX_M.io.func7_out
     EX_MEM_M.io.IDEX_rd := ID_EX_M.io.rd_out
     ALU.io.alu_Op := ALU_Control.io.out
-  
-  
+
     // EX_MEM PIPELINE
     EX_MEM_M.io.IDEX_MEMRD := ID_EX_M.io.ctrl_MemRd_out 
     EX_MEM_M.io.IDEX_MEMWR := ID_EX_M.io.ctrl_MemWr_out
@@ -265,10 +287,10 @@ class PIPELINE extends Module {
     EX_MEM_M.io.IDEX_rs2 := RS2_value
     EX_MEM_M.io.alu_out := ALU.io.out
   
-  
     // MEMORY
     DataMemory.io.mem_read := EX_MEM_M.io.EXMEM_memRd_out 
     DataMemory.io.mem_write := EX_MEM_M.io.EXMEM_memWr_out
+    
     MEM_WB_M.io.EXMEM_MEMTOREG := EX_MEM_M.io.EXMEM_memToReg_out
     MEM_WB_M.io.EXMEM_REG_W := EX_MEM_M.io.EXMEM_reg_w_out
     DataMemory.io.dataIn := EX_MEM_M.io.EXMEM_rs2_out
@@ -280,15 +302,17 @@ class PIPELINE extends Module {
   
   
     // MEM_WB PIPELINE
-    MEM_WB_M.io.in_dataMem_out := DataMemory.io.dataOut
-    MEM_WB_M.io.in_alu_out := EX_MEM_M.io.EXMEM_alu_out
+    MEM_WB_M.io.in_dataMem_out := DataMemory.io.dataOut // data from Data Memory
+    MEM_WB_M.io.in_alu_out := EX_MEM_M.io.EXMEM_alu_out // data from Alu Result
   
-  
-    // WRITE_BACK
-    d := MuxLookup (MEM_WB_M.io.MEMWB_memToReg_out, 0.S, Array (
-        (0.U) -> MEM_WB_M.io.MEMWB_alu_out,
-        (1.U) -> MEM_WB_M.io.MEMWB_dataMem_out))
-  
+    // WRITE_BACK data to registerfile writedata
+    when (MEM_WB_M.io.MEMWB_memToReg_out === 0.U) {
+      d := MEM_WB_M.io.MEMWB_alu_out        // data from Alu Result
+    }.elsewhen (MEM_WB_M.io.MEMWB_memToReg_out === 1.U) {
+      d := MEM_WB_M.io.MEMWB_dataMem_out    // data from Data Memory
+    }.otherwise {
+      d := 0.S
+    }
     RegFile.io.w_data := d
   
   

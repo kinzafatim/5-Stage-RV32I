@@ -1,7 +1,7 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Pipeline.TOPTest, org.scalatest.tools.Framework$$anon$1@704c9009, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Pipeline.TOPTest, org.scalatest.tools.Framework$$anon$1@bed3a7a, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTOPTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TOPTest test[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 40 seconds, 459 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 5-Stage test[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 13 seconds, 187 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
