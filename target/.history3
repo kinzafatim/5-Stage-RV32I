@@ -1,0 +1,30 @@
+1720815136158:testOnly single_cycle.Alutest -- -DwriteVcd=1
+1720865553723:testOnly single_cycle.branchtest -- -DwriteVcd=1
+1720866265421:testOnly single_cycle.Datamemtest -- -DwriteVcd=1
+1720866542590:testOnly single_cycle.immGentest -- -DwriteVcd=1
+1720867584621:testOnly single_cycle.instr_memtest -- -DwriteVcd=1
+1720868187906:testOnly single_cycle.regfiletest -- -DwriteVcd=1
+1720869078245:testOnly single_cycle.pctest -- -DwriteVcd=1
+1720869472935:testOnly single_cycle.Controltest -- -DwriteVcd=1
+1721146979877:testOnly single_cycle.RV321test -- -DwriteVcd=1
+1721152589249:sbt
+1721152711124:testOnly single_cycle.RV321test -- -DwriteVcd=1
+1721280095116:testOnly single_cycle.RV32Itest
+1721280110526:testOnly single_cycle.RV321test -- -DwriteVcd=1
+1721282905137:export CHISELTEST_VCD=1
+1721282929493:testOnly single_cycle.RV321test -- -DwriteVcd=1
+1721283851861:testOnly single_cycle.RV32Itest -- -DwriteVcd=1
+1723032202251:testOnly Toptest -- -DwriteVcd=1
+1723033306810:testOnly Toptest
+1723144373333:testOnly Toptest -- -DwriteVcd=1
+1723144403490:testOnly EXtest -- -DwriteVcd=1
+1723144407669:testOnly Toptest -- -DwriteVcd=1
+1723186076773:testOnly pipeline.Toptest -- -DwriteVcd=1
+1723239283210:testOnly pipeline.Datapathtest -- -DwriteVcd=1
+1724156784415:git remote -v
+1724157185071:testOnly pipeline.Datapathtest -- -DwriteVcd=1
+1725352932424:OA
+1725352935054:testOnly pipeline.Datapathtest -- -DwriteVcd=1
+1725558449132:testOnly Pipeline.TOPTest -- -DwriteVcd=1
+1725701196701:testOnly pipeline.Datapathtest -- -DwriteVcd=1
+1725701331952:testOnly Pipeline.TOPTest -- -DwriteVcd=1

@@ -1,0 +1,13 @@
+#Successful Tests
+#Thu Sep 12 15:21:22 PKT 2024
+single_cycle.instr_memtest=1720867595334
+Pipeline.TOPTest=1726136482156
+single_cycle.RV32Itest=1721808392759
+single_cycle.pctest=1720869137521
+pipeline.Datapathtest=1725557005388
+single_cycle.Datamemtest=1720866283968
+single_cycle.regfiletest=1720868256513
+pipeline.Toptest=1723238493865
+single_cycle.immGentest=1720867276402
+single_cycle.branchtest=1720866039152
+single_cycle.Alutest=1720865499457

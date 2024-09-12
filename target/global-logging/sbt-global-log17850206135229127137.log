@@ -1,0 +1,309 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly Toptest -- -DwriteVcd=1, Some(fdedecd5-f293-4ffb-9279-c9512a116f97), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 10 Scala sources to /home/kinzaa/Desktop/5-stage-pipeline-RV32I/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:5:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:6:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3.util.Decoupled[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:8:42: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0mclass GcdInputBundle(val w: Int) extends Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:9:16: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val value1 = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:9:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val value1 = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:10:16: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val value2 = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:10:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val value2 = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:13:43: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0mclass GcdOutputBundle(val w: Int) extends Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:14:16: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val value1 = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:14:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val value1 = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:15:16: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val value2 = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:15:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val value2 = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:16:16: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val gcd    = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:16:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val gcd    = UInt(w.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:26:40: not found: type MultiIOModule[0m
+[0m[[0m[31merror[0m] [0m[0mclass DecoupledGcd(width: Int) extends MultiIOModule {[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:27:15: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val input = IO(Flipped(Decoupled(new GcdInputBundle(width))))[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:27:18: not found: value Flipped[0m
+[0m[[0m[31merror[0m] [0m[0m  val input = IO(Flipped(Decoupled(new GcdInputBundle(width))))[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:27:26: not found: value Decoupled[0m
+[0m[[0m[31merror[0m] [0m[0m  val input = IO(Flipped(Decoupled(new GcdInputBundle(width))))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:28:16: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val output = IO(Decoupled(new GcdOutputBundle(width)))[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:28:19: not found: value Decoupled[0m
+[0m[[0m[31merror[0m] [0m[0m  val output = IO(Decoupled(new GcdOutputBundle(width)))[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:30:21: not found: value Reg[0m
+[0m[[0m[31merror[0m] [0m[0m  val xInitial    = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:30:25: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val xInitial    = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:31:21: not found: value Reg[0m
+[0m[[0m[31merror[0m] [0m[0m  val yInitial    = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:31:25: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val yInitial    = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:32:21: not found: value Reg[0m
+[0m[[0m[31merror[0m] [0m[0m  val x           = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:32:25: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val x           = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:33:21: not found: value Reg[0m
+[0m[[0m[31merror[0m] [0m[0m  val y           = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:33:25: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val y           = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:34:21: not found: value RegInit[0m
+[0m[[0m[31merror[0m] [0m[0m  val busy        = RegInit(false.B)[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:34:35: value B is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m  val busy        = RegInit(false.B)[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:35:21: not found: value RegInit[0m
+[0m[[0m[31merror[0m] [0m[0m  val resultValid = RegInit(false.B)[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:35:35: value B is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m  val resultValid = RegInit(false.B)[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:41:3: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m  when(busy)  {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:42:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(x > y) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:47:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(x === 0.U || y === 0.U) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:48:7: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m      when(x === 0.U) {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:58:7: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m      when(output.ready && resultValid) {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/DecoupledGCD.scala:64:5: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m    when(input.valid) {[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:5:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:12:19: illegal inheritance from final class Module[0m
+[0m[[0m[31merror[0m] [0m[0mclass GCD extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:13:12: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:13:19: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:14:25: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val value1        = Input(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:14:31: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val value1        = Input(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:14:39: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val value1        = Input(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:15:25: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val value2        = Input(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:15:31: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val value2        = Input(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:15:39: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val value2        = Input(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:16:25: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val loadingValues = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:16:31: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val loadingValues = Input(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:17:25: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val outputGCD     = Output(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:17:32: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val outputGCD     = Output(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:17:40: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    val outputGCD     = Output(UInt(16.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:18:25: not found: value Output[0m
+[0m[[0m[31merror[0m] [0m[0m    val outputValid   = Output(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:18:32: not found: value Bool[0m
+[0m[[0m[31merror[0m] [0m[0m    val outputValid   = Output(Bool())[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:21:12: not found: value Reg[0m
+[0m[[0m[31merror[0m] [0m[0m  val x  = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:21:16: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val x  = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:22:12: not found: value Reg[0m
+[0m[[0m[31merror[0m] [0m[0m  val y  = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:22:16: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m  val y  = Reg(UInt())[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:24:3: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m  when(x > y) { x := x - y }[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/gcd/GCD.scala:27:3: not found: value when[0m
+[0m[[0m[31merror[0m] [0m[0m  when(io.loadingValues) {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:2:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:3:8: not found: object chisel3[0m
+[0m[[0m[31merror[0m] [0m[0mimport chisel3.util._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:7:17: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val beq   = 0.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:7:21: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val beq   = 0.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:8:17: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val bne   = 1.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:8:21: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val bne   = 1.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:9:17: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val blt   = 4.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:9:21: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val blt   = 4.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:10:18: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val bge    = 5.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:10:22: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val bge    = 5.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:11:18: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val bltu   = 6.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:11:22: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val bltu   = 6.U(3.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:12:18: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val bgeu   = 7.U(3.W) [0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:12:22: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val bgeu   = 7.U(3.W) [0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:17:19: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_add = 0.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:17:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_add = 0.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:18:19: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_sub = 1.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:18:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_sub = 1.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:19:19: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_sll = 2.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:19:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_sll = 2.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:20:19: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_slt = 4.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:20:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_slt = 4.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:21:20: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_sltu = 6.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:21:24: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_sltu = 6.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:22:19: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_xor = 8.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:22:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_xor = 8.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:23:20: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_srl = 10.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:23:24: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_srl = 10.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:24:20: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_sra = 11.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:24:24: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_sra = 11.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:25:19: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_or = 12.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:25:23: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_or = 12.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:26:20: value U is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_and = 14.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:26:24: value W is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m  val alu_and = 14.U(4.W)[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:29:18: illegal inheritance from final class Module[0m
+[0m[[0m[31merror[0m] [0m[0mclass EX extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:30:12: not found: value IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle{[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:30:19: not found: type Bundle[0m
+[0m[[0m[31merror[0m] [0m[0m  val io = IO(new Bundle{[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:32:17: not found: value Input[0m
+[0m[[0m[31merror[0m] [0m[0m    val fnct3 = Input(UInt(3.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/EX.scala:32:23: not found: value UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val fnct3 = Input(UInt(3.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m348 errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 5 s, completed Aug 7, 2024, 5:19:20 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

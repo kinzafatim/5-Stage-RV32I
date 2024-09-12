@@ -1,0 +1,33 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly single_cycle.RV321test -- -DwriteVcd=1, Some(6bb87a89-e77c-4a8e-ab1d-6d627809fba5), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources to /home/kinzaa/single cycle/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:57:19: value jal is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val btaken: chisel3.Bool; val aluOP: chisel3.UInt; val rs1: chisel3.UInt; val rs2: chisel3.UInt; val rd: chisel3.UInt; val imm: chisel3.SInt; val regWrEn: chisel3.Bool; val branch: chisel3.Bool; val memRead: chisel3.Bool; val memWrite: chisel3.Bool; val memToReg: chisel3.Bool; val aluImm: chisel3.Bool; val branchfun3: chisel3.UInt; val pcsel: chisel3.Bool; val jaltype: chisel3.Bool; val jalrtype: chisel3.Bool; val luitype: chisel3.Bool; val auipctype: chisel3.Bool}[0m
+[0m[[0m[31merror[0m] [0m[0m  when(control.io.jal) { // JAL instruction[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:58:47: value immediate is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val btaken: chisel3.Bool; val aluOP: chisel3.UInt; val rs1: chisel3.UInt; val rs2: chisel3.UInt; val rd: chisel3.UInt; val imm: chisel3.SInt; val regWrEn: chisel3.Bool; val branch: chisel3.Bool; val memRead: chisel3.Bool; val memWrite: chisel3.Bool; val memToReg: chisel3.Bool; val aluImm: chisel3.Bool; val branchfun3: chisel3.UInt; val pcsel: chisel3.Bool; val jaltype: chisel3.Bool; val jalrtype: chisel3.Bool; val luitype: chisel3.Bool; val auipctype: chisel3.Bool}[0m
+[0m[[0m[31merror[0m] [0m[0m    pc.io.pc_in := pc.io.pc4_out + control.io.immediate[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:61:19: value jalr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val btaken: chisel3.Bool; val aluOP: chisel3.UInt; val rs1: chisel3.UInt; val rs2: chisel3.UInt; val rd: chisel3.UInt; val imm: chisel3.SInt; val regWrEn: chisel3.Bool; val branch: chisel3.Bool; val memRead: chisel3.Bool; val memWrite: chisel3.Bool; val memToReg: chisel3.Bool; val aluImm: chisel3.Bool; val branchfun3: chisel3.UInt; val pcsel: chisel3.Bool; val jaltype: chisel3.Bool; val jalrtype: chisel3.Bool; val luitype: chisel3.Bool; val auipctype: chisel3.Bool}[0m
+[0m[[0m[31merror[0m] [0m[0m  when(control.io.jalr) { // JALR instruction[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:62:51: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.SInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val jumpTarget = (regFile.io.rs1 + control.io.imm).asUInt() // Convert to UInt[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:66:19: value lui is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val btaken: chisel3.Bool; val aluOP: chisel3.UInt; val rs1: chisel3.UInt; val rs2: chisel3.UInt; val rd: chisel3.UInt; val imm: chisel3.SInt; val regWrEn: chisel3.Bool; val branch: chisel3.Bool; val memRead: chisel3.Bool; val memWrite: chisel3.Bool; val memToReg: chisel3.Bool; val aluImm: chisel3.Bool; val branchfun3: chisel3.UInt; val pcsel: chisel3.Bool; val jaltype: chisel3.Bool; val jalrtype: chisel3.Bool; val luitype: chisel3.Bool; val auipctype: chisel3.Bool}[0m
+[0m[[0m[31merror[0m] [0m[0m  when(control.io.lui) { // LUI instruction[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:70:19: value auipc is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val btaken: chisel3.Bool; val aluOP: chisel3.UInt; val rs1: chisel3.UInt; val rs2: chisel3.UInt; val rd: chisel3.UInt; val imm: chisel3.SInt; val regWrEn: chisel3.Bool; val branch: chisel3.Bool; val memRead: chisel3.Bool; val memWrite: chisel3.Bool; val memToReg: chisel3.Bool; val aluImm: chisel3.Bool; val branchfun3: chisel3.UInt; val pcsel: chisel3.Bool; val jaltype: chisel3.Bool; val jalrtype: chisel3.Bool; val luitype: chisel3.Bool; val auipctype: chisel3.Bool}[0m
+[0m[[0m[31merror[0m] [0m[0m  when(control.io.auipc) { // AUIPC instruction[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:71:66: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.SInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val targetAddress = (pc.io.pc_out.asUInt() + (control.io.imm << 12)).asUInt() // Convert to UInt[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m7 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 2 s, completed Jul 17, 2024, 5:12:12 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

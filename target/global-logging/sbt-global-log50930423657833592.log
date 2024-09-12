@@ -1,0 +1,23 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly pipeline.Datapathtest -- -DwriteVcd=1, Some(f9b3e408-7cc9-46e0-902b-3d9d91438034), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /home/kinzaa/Desktop/5-stage-pipeline-RV32I/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/Datapath.scala:93:27: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Bool[0m
+[0m[[0m[31merror[0m] [0m[0m  when(decoder.io.bout && D_EX_branch || D_EX_jaltype) {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/Datapath.scala:110:8: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Bool[0m
+[0m[[0m[31merror[0m] [0m[0m  when(D_EX_aluImm) {[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-stage-pipeline-RV32I/src/main/scala/pipeline/Datapath.scala:181:48: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits]]{def do_>>(that: chisel3.UInt)(implicit sourceInfo: chisel3.internal.sourceinfo.SourceInfo,implicit compileOptions: chisel3.CompileOptions): chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits]; def do_>>(that: Int)(implicit sourceInfo: chisel3.internal.sourceinfo.SourceInfo,implicit compileOptions: chisel3.CompileOptions): chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits]; def do_>>(that: BigInt)(implicit sourceInfo: chisel3.internal.sourceinfo.SourceInfo,implicit compileOptions: chisel3.CompileOptions): chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits]; def do_<<(that: chisel3.UInt)(implicit sourceInfo: chisel3.internal.sourceinfo.SourceInfo,implicit compileOptions: chisel3.CompileOptions): chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits]; def do_<<(that: Int)(implicit sourceInfo: chisel3.internal.sourceinfo.SourceInfo,implicit compileOptions: chisel3.CompileOptions): chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits]; def do_<<(that: BigInt)(implicit sourceInfo: chisel3.internal.sourceinfo.SourceInfo,implicit compileOptions: chisel3.CompileOptions): chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits]; def do_unary_~(implicit sourceInfo: chisel3.internal.sourceinfo.SourceInfo,implicit compileOptions: chisel3.CompileOptions): chisel3.Bits with chisel3.Num[_ >: chisel3.SInt with chisel3.UInt <: chisel3.Bits]}[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.SInt[0m
+[0m[[0m[31merror[0m] [0m[0m    decoder.io.writeData := (fetch_pc.asSInt + D_EX_imm)[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Aug 29, 2024, 3:32:46 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

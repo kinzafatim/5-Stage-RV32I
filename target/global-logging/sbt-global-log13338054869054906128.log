@@ -1,0 +1,28 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly single_cycle.Alutest -- -DwriteVcd=1, Some(00046e7b-7eb4-4a5a-afd1-42b9760de504), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/kinzaa/single cycle/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAlutest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- ALU Test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  chisel3.internal.ChiselException: Connection between sink (SInt<32>(IO in unelaborated ALU)) and source (Bool(OpResult in ALU)) failed @: Sink (SInt<32>(IO in unelaborated ALU)) and Source (Bool(OpResult in ALU)) have different types.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at single_cycle.ALU.$anonfun$new$7(ALU.scala:54)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.WhenContext.<init>(When.scala:124)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.WhenContext.elsewhen(When.scala:101)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.util.SwitchContext.is(Conditional.scala:39)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.util.SwitchContext.is(Conditional.scala:46)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at single_cycle.ALU.<init>(ALU.scala:54)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at single_cycle.Alutest.$anonfun$new$2(Alutest.scala:9)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 634 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	single_cycle.Alutest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 2 s, completed Jul 13, 2024, 2:02:50 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

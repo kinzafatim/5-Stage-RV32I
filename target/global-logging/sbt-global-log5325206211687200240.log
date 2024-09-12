@@ -1,0 +1,14 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly Pipeline.TOPTest -- -DwriteVcd=1, Some(527b43ae-1eea-4dfd-ad00-ae67d757e127), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources to /home/kinzaa/Desktop/example/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/example/src/main/scala/Pipeline/TOP.scala:72:11: value regfile_reg_write is not a member of chisel3.Bundle{val opcode: chisel3.UInt; val mem_write: chisel3.Bool; val branch: chisel3.Bool; val mem_read: chisel3.Bool; val reg_write: chisel3.Bool; val men_to_reg: chisel3.Bool; val alu_operation: chisel3.UInt; val operand_A: chisel3.UInt; val operand_B: chisel3.Bool; val extend: chisel3.UInt; val next_pc_sel: chisel3.UInt; val rs1: chisel3.UInt; val rs2: chisel3.UInt; val regfile_decode: chisel3.Bool; val w_reg: chisel3.UInt; val w_data: chisel3.SInt; val rdata1: chisel3.SInt; val rdata2: chisel3.SInt}[0m
+[0m[[0m[31merror[0m] [0m[0mdecode.io.regfile_reg_write := RegNext(decode.io.reg_write )[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/example/src/main/scala/Pipeline/TOP.scala:272:11: value regfile_reg_write is not a member of chisel3.Bundle{val opcode: chisel3.UInt; val mem_write: chisel3.Bool; val branch: chisel3.Bool; val mem_read: chisel3.Bool; val reg_write: chisel3.Bool; val men_to_reg: chisel3.Bool; val alu_operation: chisel3.UInt; val operand_A: chisel3.UInt; val operand_B: chisel3.Bool; val extend: chisel3.UInt; val next_pc_sel: chisel3.UInt; val rs1: chisel3.UInt; val rs2: chisel3.UInt; val regfile_decode: chisel3.Bool; val w_reg: chisel3.UInt; val w_data: chisel3.SInt; val rdata1: chisel3.SInt; val rdata2: chisel3.SInt}[0m
+[0m[[0m[31merror[0m] [0m[0mdecode.io.regfile_reg_write := MEM_WB_module.io.MEMWB_reg_w_out[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Sep 6, 2024, 12:12:05 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

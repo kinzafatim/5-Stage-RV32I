@@ -1,0 +1,53 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly single_cycle.RV321test -- -DwriteVcd=1, Some(1df98c04-2dd5-4eed-966d-9578d761979e), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources to /home/kinzaa/single cycle/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:19:53: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(20, io.instruction(31)), io.instr(31, 20)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:23:53: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(20, io.instruction(31)), io.instr(31), io.instr(30, 25), io.instr(11, 7)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:23:67: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(20, io.instruction(31)), io.instr(31), io.instr(30, 25), io.instr(11, 7)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:23:85: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(20, io.instruction(31)), io.instr(31), io.instr(30, 25), io.instr(11, 7)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:27:53: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(19, io.instruction(31)), io.instr(31), io.instr(7), io.instr(30, 25), io.instr(11, 8), 0.U(1.W)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:27:67: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(19, io.instruction(31)), io.instr(31), io.instr(7), io.instr(30, 25), io.instr(11, 8), 0.U(1.W)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:27:80: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(19, io.instruction(31)), io.instr(31), io.instr(7), io.instr(30, 25), io.instr(11, 8), 0.U(1.W)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:27:98: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(19, io.instruction(31)), io.instr(31), io.instr(7), io.instr(30, 25), io.instr(11, 8), 0.U(1.W)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:39:53: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(11, io.instruction(31)), io.instr(31), io.instr(19, 12), io.instr(20), io.instr(30, 21), 0.U(1.W)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:39:67: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(11, io.instruction(31)), io.instr(31), io.instr(19, 12), io.instr(20), io.instr(30, 21), 0.U(1.W)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:39:85: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(11, io.instruction(31)), io.instr(31), io.instr(19, 12), io.instr(20), io.instr(30, 21), 0.U(1.W)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:39:99: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(11, io.instruction(31)), io.instr(31), io.instr(19, 12), io.instr(20), io.instr(30, 21), 0.U(1.W)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ImmGen.scala:43:53: value instr is not a member of chisel3.Bundle{val instruction: chisel3.UInt; val imm_val: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m      wiree := Cat(Fill(20, io.instruction(31)), io.instr(31, 20)).asSInt()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:27:15: value pcsel is not a member of single_cycle.Pc[0m
+[0m[[0m[31merror[0m] [0m[0m    pc_Module.pcsel := control_Module.io.pcsel[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:28:15: value aluout is not a member of single_cycle.Pc[0m
+[0m[[0m[31merror[0m] [0m[0m    pc_Module.aluout := alu_Module.io.out[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m15 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Jul 16, 2024, 9:43:33 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

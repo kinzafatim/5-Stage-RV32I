@@ -1,0 +1,59 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly single_cycle.Alutest -- -DwriteVcd=1, Some(a696bee3-ba91-490a-8db0-97d194bb1b7c), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 11 Scala sources to /home/kinzaa/single cycle/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:46:12: not found: value ALU_ADD[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_ADD){ // add. addi [0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:49:12: not found: value ALU_SUB[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SUB){ // sub[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:52:12: not found: value ALU_SLT[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SLT){ // slt[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:55:12: not found: value ALU_SLTU[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SLTU){ //sltu[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:58:12: not found: value ALU_SRA[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SRA){ // sra[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:61:12: not found: value ALU_SRL[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SRL){ // srl[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:64:12: not found: value ALU_SLL[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SLL){ // sll[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:67:12: not found: value ALU_AND[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_AND){ // and[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:70:12: not found: value ALU_OR[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_OR){ // or[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:73:12: not found: value ALU_XOR[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_XOR){ // xor[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/Control.scala:48:10: value instr is not a member of single_cycle.ImmGen[0m
+[0m[[0m[31merror[0m] [0m[0m  immGen.instr := io.instruction // Connect instruction input to ImmGen[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/Control.scala:51:20: value imm_val is not a member of single_cycle.ImmGen[0m
+[0m[[0m[31merror[0m] [0m[0m  io.imm := immGen.imm_val // Connect imm output from ImmGen[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:17:39: not found: type Decoder[0m
+[0m[[0m[31merror[0m] [0m[0m    val decoder_Module   = Module(new Decoder)[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:30:15: value pcsel is not a member of single_cycle.Pc[0m
+[0m[[0m[31merror[0m] [0m[0m    pc_Module.pcsel := control_Module.io.pcsel[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:31:15: value aluout is not a member of single_cycle.Pc[0m
+[0m[[0m[31merror[0m] [0m[0m    pc_Module.aluout := alu_Module.io.out[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:50:35: value := is not a member of Unit[0m
+[0m[[0m[31merror[0m] [0m[0mpossible cause: maybe a semicolon is missing before `value :='?[0m
+[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
+[0m[[0m[31merror[0m] [0m[0m    regFile_Module.io.writeEnable := control_Module.io.regWrEn[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m16 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Jul 13, 2024, 1:26:21 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m

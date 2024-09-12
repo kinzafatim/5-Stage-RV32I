@@ -1,0 +1,110 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly pipeline.Datapathtest -- -DwriteVcd=1, Some(438ed86f-bdb8-4d34-908c-d2030add0859), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/kinzaa/Desktop/5-stage-pipeline-RV32I/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDatapathtest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Datapath Test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.passes.PassExceptions: firrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.btaken <= mux(_T_10, memory_io_btaken_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 18:26] : [module Datapath]  Reference forwarding is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.regWrEn <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   @[Datapath.scala 34:31] : forwarding.io.EX_regWriteEn <= execute.io.regWrEn @[Datapath.scala 34:31][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.writeData <= mux(_T_10, memory_io_writeData_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.branch <= mux(_T_11, writeBack_io_branch_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.memToReg <= mux(_T_11, writeBack_io_memToReg_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.rd <= mux(_T_11, writeBack_io_rd_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.regWriteEnable <= mux(_T_10, memory_io_regWriteEnable_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.luitype <= mux(_T_11, writeBack_io_luitype_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.luitype <= mux(_T_10, memory_io_luitype_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.jalrtype <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.memWrite <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.branch <= mux(_T_10, memory_io_branch_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.pcsel <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.regWrEn <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.rd <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.regWriteEnable <= mux(_T_11, writeBack_io_regWriteEnable_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.branchfnct3 <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.pc_out <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.jalrtype <= mux(_T_10, memory_io_jalrtype_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.memRead <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.pcsel <= mux(_T_11, writeBack_io_pcsel_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.rs2 <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.alu_Op <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.branch <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.jaltype <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.rd <= mux(_T_10, memory_io_rd_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.auipctype <= mux(_T_10, memory_io_auipctype_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.auipctype <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 18:26] : [module Datapath]  Reference forwarding is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.regWriteEnable <= mux(_T_10, memory_io_regWriteEnable_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   @[Datapath.scala 35:32] : forwarding.io.MEM_regWriteEn <= memory.io.regWriteEnable @[Datapath.scala 35:32][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.jalrtype <= mux(_T_11, writeBack_io_jalrtype_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.memReadData <= mux(_T_11, writeBack_io_memReadData_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.memWrite <= mux(_T_10, memory_io_memWrite_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.aluResult <= mux(_T_11, writeBack_io_aluResult_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.addr <= mux(_T_10, memory_io_addr_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.pc_4out <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.auipctype <= mux(_T_11, writeBack_io_auipctype_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.memToReg <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.luitype <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.pcsel <= mux(_T_10, memory_io_pcsel_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 18:26] : [module Datapath]  Reference forwarding is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.rd <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   @[Datapath.scala 32:23] : forwarding.io.EX_rd <= execute.io.rd @[Datapath.scala 32:23][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 17:25] : [module Datapath]  Reference writeBack is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : writeBack.io.brtaken <= mux(_T_11, writeBack_io_brtaken_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 15:23] : [module Datapath]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.rs1 <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.memRead <= mux(_T_10, memory_io_memRead_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[Datapath.scala 16:22] : [module Datapath]  Reference memory is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : memory.io.memToReg <= mux(_T_10, memory_io_memToReg_REG, VOID)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.PassException: 44 errors detected![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 83 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	pipeline.Datapathtest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed Aug 29, 2024, 1:01:49 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m

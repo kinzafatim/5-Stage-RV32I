@@ -1,0 +1,66 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly single_cycle.Alutest -- -DwriteVcd=1, Some(aab3439a-c440-4611-bd0a-b354243a0b5b), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 11 Scala sources to /home/kinzaa/single cycle/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:36:21: value A is not a member of single_cycle.ALUI_O[0m
+[0m[[0m[31merror[0m] [0m[0m    val cmp= Mux(io.A(XLEN-1) === io.in_B(XLEN-1), sum(XLEN-1),Mux(io.alu_Op(1), io.in_B(XLEN-1) , io.in_A(XLEN-1)))[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:40:54: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.SInt[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    val shin = Mux(io.alu_Op(3), io.in_A, Reverse(io.in_A))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:50:12: not found: value ALU_ADD[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_ADD){ // add. addi [0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:53:12: not found: value ALU_SUB[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SUB){ // sub[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:56:12: not found: value ALU_SLT[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SLT){ // slt[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:59:12: not found: value ALU_SLTU[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SLTU){ //sltu[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:62:12: not found: value ALU_SRA[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SRA){ // sra[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:65:12: not found: value ALU_SRL[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SRL){ // srl[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:68:12: not found: value ALU_SLL[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_SLL){ // sll[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:71:12: not found: value ALU_AND[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_AND){ // and[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:74:12: not found: value ALU_OR[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_OR){ // or[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/ALU.scala:77:12: not found: value ALU_XOR[0m
+[0m[[0m[31merror[0m] [0m[0m        is(ALU_XOR){ // xor[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/Control.scala:48:10: value instr is not a member of single_cycle.ImmGen[0m
+[0m[[0m[31merror[0m] [0m[0m  immGen.instr := io.instruction // Connect instruction input to ImmGen[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/Control.scala:51:20: value imm_val is not a member of single_cycle.ImmGen[0m
+[0m[[0m[31merror[0m] [0m[0m  io.imm := immGen.imm_val // Connect imm output from ImmGen[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:17:39: not found: type Decoder[0m
+[0m[[0m[31merror[0m] [0m[0m    val decoder_Module   = Module(new Decoder)[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:30:15: value pcsel is not a member of single_cycle.Pc[0m
+[0m[[0m[31merror[0m] [0m[0m    pc_Module.pcsel := control_Module.io.pcsel[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:31:15: value aluout is not a member of single_cycle.Pc[0m
+[0m[[0m[31merror[0m] [0m[0m    pc_Module.aluout := alu_Module.io.out[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:50:35: value := is not a member of Unit[0m
+[0m[[0m[31merror[0m] [0m[0mpossible cause: maybe a semicolon is missing before `value :='?[0m
+[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because receiver is not assignable.[0m
+[0m[[0m[31merror[0m] [0m[0m    regFile_Module.io.writeEnable := control_Module.io.regWrEn[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m18 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 2 s, completed Jul 13, 2024, 1:23:50 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

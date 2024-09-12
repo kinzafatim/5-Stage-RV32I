@@ -1,0 +1,28 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly pipeline.Datapathtest -- -DwriteVcd=1, Some(a669c465-1b78-40ce-96c5-fbdd3955c56e), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/kinzaa/Desktop/5-stage-pipeline-RV32I/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDatapathtest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Datapath Test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.transforms.CheckCombLoops$CombLoopException: : [module Datapath] Combinational loop detected:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath.execute.io_in_A[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath.execute._sum_T_5	 @[EX.scala 80:21][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath.execute._sum_T_6	 @[EX.scala 80:21][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath.execute.sum	 @[EX.scala 80:21][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath.execute._GEN_9	 @[Conditional.scala 40:58 EX.scala 96:14][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath.execute.io_out	[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath._GEN_21	 @[Datapath.scala 231:43 Datapath.scala 233:18][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath.forwardMuxA	[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mDatapath.execute.io_in_A	 @[Datapath.scala 298:19][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 923 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	pipeline.Datapathtest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 5 s, completed Sep 4, 2024, 11:54:56 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m

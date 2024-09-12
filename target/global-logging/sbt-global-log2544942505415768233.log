@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly single_cycle.RV321test -- -DwriteVcd=1, Some(a7d6d7ed-b36b-4f45-9bf5-dd82834ec1de), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 11 Scala sources to /home/kinzaa/single cycle/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:27:15: value pcsel is not a member of single_cycle.Pc[0m
+[0m[[0m[31merror[0m] [0m[0m    pc_Module.pcsel := control_Module.io.pcsel[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:28:15: value aluout is not a member of single_cycle.Pc[0m
+[0m[[0m[31merror[0m] [0m[0m    pc_Module.aluout := alu_Module.io.out[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/single cycle/src/main/scala/single_cycle/RV32I.scala:30:63: value inst is not a member of chisel3.Bundle{val addr: chisel3.UInt; val instruction: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m    control_Module.io.instruction:= instruction_mem_Module.io.inst[0m
+[0m[[0m[31merror[0m] [0m[0m                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 2 s, completed Jul 16, 2024, 9:51:19 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
