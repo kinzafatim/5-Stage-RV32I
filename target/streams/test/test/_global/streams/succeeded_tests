@@ -1,7 +1,7 @@
 #Successful Tests
-#Thu Sep 12 18:33:17 PKT 2024
+#Thu Sep 12 18:48:09 PKT 2024
 single_cycle.instr_memtest=1720867595334
-Pipeline.TOPTest=1726147997179
+Pipeline.TOPTest=1726148889777
 single_cycle.RV32Itest=1721808392759
 single_cycle.pctest=1720869137521
 pipeline.Datapathtest=1725557005388

@@ -20,7 +20,6 @@ class MEM_WB extends Module {
     val MEMWB_alu_out = Output(SInt(32.W))
   })
 
-  // Directly using RegNext for all outputs
   io.MEMWB_memToReg_out := RegNext(io.EXMEM_MEMTOREG)
   io.MEMWB_reg_w_out := RegNext(io.EXMEM_REG_W)
   io.MEMWB_memRd_out := RegNext(io.EXMEM_MEMRD)

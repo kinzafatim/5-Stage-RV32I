@@ -4,13 +4,13 @@ import chisel3.util._
 
 class RegisterFile extends Module {
   val io = IO(new Bundle {
-    val rs1 = Input(UInt(5.W))
-    val rs2 = Input(UInt(5.W))
+    val rs1       = Input(UInt(5.W))
+    val rs2       = Input(UInt(5.W))
     val reg_write = Input(Bool())
-    val w_reg = Input(UInt(5.W))
-    val w_data = Input(SInt(32.W))
-    val rdata1 = Output(SInt(32.W))
-    val rdata2 = Output(SInt(32.W))
+    val w_reg     = Input(UInt(5.W))
+    val w_data    = Input(SInt(32.W))
+    val rdata1    = Output(SInt(32.W))
+    val rdata2    = Output(SInt(32.W))
   })
   val regfile = RegInit(VecInit(Seq.fill(32)(0.S(32.W))))
 
