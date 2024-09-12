@@ -6,9 +6,15 @@ class PIPELINE extends Module {
     val io = IO(new Bundle {
         val out = Output (SInt(4.W))
     })
+    // PC / PC+4
     val PC = Module(new PC)
     val PC4 = Module(new PC4)
+
+    // Memory
     val InstMemory =  Module(new InstMem ("/home/kinzaa/Desktop/5-Stage-RV32I/src/main/scala/Pipeline/test.txt"))
+    val DataMemory = Module(new DataMemory)
+
+    // Helping Units
     val control_module = Module(new Control)
     val ImmGen =  Module(new ImmGenerator)
     val RegFile = Module(new RegisterFile)
@@ -17,15 +23,15 @@ class PIPELINE extends Module {
     val ALU = Module(new ALU)
     dontTouch(ALU.io)
     val Branch_M = Module(new Branch)
-
-    val DataMemory = Module(new DataMem1)
     val JALR = Module(new Jalr)
-            // 
+
+    //  Pipes of stages
     val IF_ID_M = Module(new IF_ID)
     val ID_EX_M = Module(new ID_EX)
     val EX_MEM_M = Module(new EX_MEM)
     val MEM_WB_M = Module(new MEM_WB)
-            // hazard units
+    
+    // hazard units
     val Forwarding = Module(new Forwarding)
     val HazardDetect = Module(new HazardDetection)
     val Branch_Forward = Module(new BranchForward)
@@ -50,17 +56,17 @@ class PIPELINE extends Module {
 
 
     // IF_ID PIPELINE
-    IF_ID_M.io.pc_in := PC.io.out
-    IF_ID_M.io.pc4_in := PC4.io.out
-    IF_ID_M.io.mux_f_pc_in := PC_for
-    IF_ID_M.io.mux_g_inst_in := Instruction_F
+    IF_ID_M.io.pc_in := PC.io.out                   // PC  out from pc
+    IF_ID_M.io.pc4_in := PC4.io.out                 // PC4 out from pc4
+    IF_ID_M.io.mux_f_pc_in := PC_for                // Selected PC
+    IF_ID_M.io.mux_g_inst_in := Instruction_F       // Selected Instruction
         
-        //immGenerator Inputs
-    ImmGen.io.instr := IF_ID_M.io.mux_g_inst_out
-    ImmGen.io.pc := IF_ID_M.io.mux_f_pc_out.asUInt
-    // DECODE
+    //ImmGenerator Inputs
+    ImmGen.io.instr := IF_ID_M.io.mux_g_inst_out    // Instrcution to generate Immidiate Value 32
+    ImmGen.io.pc := IF_ID_M.io.mux_f_pc_out.asUInt  // PC to add
     
-    control_module.io.opcode := IF_ID_M.io.mux_g_inst_out(6, 0)
+    // DECODE
+    control_module.io.opcode := IF_ID_M.io.mux_g_inst_out(6, 0)   // OPcode to check Instrcution TYpe
     // Registerfile inputs
     RegFile.io.rs1 := Mux(
     control_module.io.opcode === 51.U || 
@@ -99,7 +105,6 @@ class PIPELINE extends Module {
     }.otherwise {
       S_rs1DataIn := 0.S 
     }
-
     // rs2_data
     when (Structural.io.fwd_rs2 === 0.U) {
       S_rs2DataIn := RegFile.io.rdata2
@@ -111,7 +116,7 @@ class PIPELINE extends Module {
     //ID_EX_M inputs
     ID_EX_M.io.rs1_data_in := S_rs1DataIn
     ID_EX_M.io.rs2_data_in := S_rs2DataIn
-    
+    // Stall when forward
     when(HazardDetect.io.ctrl_forward === "b1".U) {
         ID_EX_M.io.ctrl_MemWr_in := 0.U
         ID_EX_M.io.ctrl_MemRd_in := 0.U
@@ -139,7 +144,8 @@ class PIPELINE extends Module {
     HazardDetect.io.current_pc := IF_ID_M.io.mux_f_pc_out
     
     MEM_WB_M.io.EXMEM_MEMRD := EX_MEM_M.io.EXMEM_memRd_out
-        // Branch forward inputs
+    
+    // Branch forward inputs
     Branch_Forward.io.ID_EX_RD := ID_EX_M.io.rd_out
     Branch_Forward.io.EX_MEM_RD := EX_MEM_M.io.EXMEM_rd_out 
     Branch_Forward.io.MEM_WB_RD := MEM_WB_M.io.MEMWB_rd_out
@@ -149,7 +155,7 @@ class PIPELINE extends Module {
     Branch_Forward.io.rs1 := IF_ID_M.io.mux_g_inst_out(19, 15)
     Branch_Forward.io.rs2 := IF_ID_M.io.mux_g_inst_out(24, 20)
     Branch_Forward.io.ctrl_branch := control_module.io.branch
-        // Branch X
+    // Branch X
     Branch_M.io.arg_x := MuxLookup (Branch_Forward.io.forward_rs1, 0.S, Array (
         (0.U) -> RegFile.io.rdata1,
         (1.U) -> ALU.io.out, 
@@ -178,7 +184,7 @@ class PIPELINE extends Module {
         (10.U) -> RegFile.io.w_data.asUInt))
     
     JALR.io.imme := ImmValue.asUInt
-        // Branch Y
+    // Branch Y
     Branch_M.io.arg_y := MuxLookup (Branch_Forward.io.forward_rs2, 0.S, Array (
         (0.U) -> RegFile.io.rdata2,
         (1.U) -> ALU.io.out, 
@@ -187,8 +193,8 @@ class PIPELINE extends Module {
         (4.U) -> DataMemory.io.dataOut, 
         (5.U) -> RegFile.io.w_data))
     
-    Branch_M.io.fnct3 := IF_ID_M.io.mux_g_inst_out(14, 12)
-    Branch_M.io.branch := control_module.io.branch
+    Branch_M.io.fnct3 := IF_ID_M.io.mux_g_inst_out(14, 12)      // Fun3 for(beq,bne....)
+    Branch_M.io.branch := control_module.io.branch              // Branch instr yes
     
     when(HazardDetect.io.pc_forward === 1.B) {
         PC.io.in := HazardDetect.io.pc_out
@@ -226,7 +232,6 @@ class PIPELINE extends Module {
     ID_EX_M.io.func3_in := IF_ID_M.io.mux_g_inst_out(14, 12)
     ID_EX_M.io.func7_in := IF_ID_M.io.mux_g_inst_out(30)
     ID_EX_M.io.rd_in := IF_ID_M.io.mux_g_inst_out(11, 7)
-    
     
     // Forwarding Inputs
     Forwarding.io.IDEX_rs1 := ID_EX_M.io.rs1_out
@@ -290,7 +295,7 @@ class PIPELINE extends Module {
     // MEMORY
     DataMemory.io.mem_read := EX_MEM_M.io.EXMEM_memRd_out 
     DataMemory.io.mem_write := EX_MEM_M.io.EXMEM_memWr_out
-    
+
     MEM_WB_M.io.EXMEM_MEMTOREG := EX_MEM_M.io.EXMEM_memToReg_out
     MEM_WB_M.io.EXMEM_REG_W := EX_MEM_M.io.EXMEM_reg_w_out
     DataMemory.io.dataIn := EX_MEM_M.io.EXMEM_rs2_out

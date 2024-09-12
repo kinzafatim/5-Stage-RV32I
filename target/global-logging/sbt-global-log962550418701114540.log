@@ -1,13 +1,13 @@
-[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly Pipeline.TOPTest -- -DwriteVcd=1, Some(5c09000e-93fd-4169-8615-77ea150ed81c), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly Pipeline.TOPTest -- -DwriteVcd=1, Some(e21eef02-edc9-4968-8ef9-1017ad125bde), Some(CommandSource(console0)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/kinzaa/Desktop/5-Stage-RV32I/target/scala-2.12/classes ...[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTOPTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 5-Stage test[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 13 seconds, 187 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 4 seconds, 832 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[32msuccess[0m] [0m[0mTotal time: 18 s, completed Sep 12, 2024, 5:41:04 PM[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 6 s, completed Sep 12, 2024, 6:33:17 PM[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
