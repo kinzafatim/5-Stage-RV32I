@@ -18,8 +18,6 @@ class BranchForward extends Module {
     val forward_rs1 = Output(UInt(4.W))
     val forward_rs2 = Output(UInt(4.W))
   })
-
-  // Default forwarding values
   io.forward_rs1 := "b0000".U
   io.forward_rs2 := "b0000".U
 

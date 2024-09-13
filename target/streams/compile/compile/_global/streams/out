@@ -1,8 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-Stage-RV32I/src/main/scala/Pipeline/Main.scala:311:43: overloaded method value is with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  (v: chisel3.Bool,vr: chisel3.Bool*)(block: => Any)chisel3.util.SwitchContext[chisel3.Bool] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (v: chisel3.Bool)(block: => Any)chisel3.util.SwitchContext[chisel3.Bool] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (v: Iterable[chisel3.Bool])(block: => Any)chisel3.util.SwitchContext[chisel3.Bool][0m
-[0m[[0m[31merror[0m] [0m[0m cannot be applied to (chisel3.UInt)[0m
-[0m[[0m[31merror[0m] [0m[0m    switch(MEM_WB_M.io.MEMWB_memToReg_out){[0m
-[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/kinzaa/Desktop/5-Stage-RV32I/src/main/scala/Pipeline/Main.scala:144:21: value ID_EX_emRead is not a member of chisel3.Bundle{val IF_ID_inst: chisel3.UInt; val ID_EX_memRead: chisel3.Bool; val ID_EX_rd: chisel3.UInt; val pc_in: chisel3.SInt; val current_pc: chisel3.SInt; val inst_forward: chisel3.Bool; val pc_forward: chisel3.Bool; val ctrl_forward: chisel3.Bool; val inst_out: chisel3.UInt; val pc_out: chisel3.SInt; val current_pc_out: chisel3.SInt}[0m
+[0m[[0m[31merror[0m] [0m[0m    HazardDetect.io.ID_EX_emRead := ID_EX_.io.ctrl_MemRd_out[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

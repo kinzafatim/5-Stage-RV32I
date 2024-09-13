@@ -8,6 +8,5 @@ class PC4 extends Module {
         val out = Output(UInt(32.W))
     })
     io.out := 0.U
-
     io.out := io.pc + 4.U(32.W)
 }

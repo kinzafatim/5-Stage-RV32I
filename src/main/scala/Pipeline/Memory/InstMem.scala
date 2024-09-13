@@ -11,5 +11,5 @@ class InstMem(initFile: String) extends Module {
   })
   val imem = Mem(1024, UInt(32.W))
   loadMemoryFromFile(imem, initFile)
-  io.data := imem(io.addr)
+  io.data := imem(io.addr/4.U)
 }

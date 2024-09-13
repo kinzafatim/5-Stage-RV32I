@@ -22,11 +22,11 @@ class EX_MEM extends Module {
     val EXMEM_alu_out       = Output(SInt(32.W))
     })
   
-    io.EXMEM_memRd_out := RegNext(io.IDEX_MEMRD)
-    io.EXMEM_memWr_out := RegNext(io.IDEX_MEMWR)
-    io.EXMEM_memToReg_out := RegNext(io.IDEX_MEMTOREG)
-    io.EXMEM_reg_w_out := RegNext(io.IDEX_REG_W)
-    io.EXMEM_rs2_out := RegNext(io.IDEX_rs2)
-    io.EXMEM_rd_out := RegNext(io.IDEX_rd)
-    io.EXMEM_alu_out := RegNext(io.alu_out)
+    io.EXMEM_memRd_out      := RegNext(io.IDEX_MEMRD)
+    io.EXMEM_memWr_out      := RegNext(io.IDEX_MEMWR)
+    io.EXMEM_memToReg_out   := RegNext(io.IDEX_MEMTOREG)
+    io.EXMEM_reg_w_out      := RegNext(io.IDEX_REG_W)
+    io.EXMEM_rs2_out        := RegNext(io.IDEX_rs2)
+    io.EXMEM_rd_out         := RegNext(io.IDEX_rd)
+    io.EXMEM_alu_out        := RegNext(io.alu_out)
 }

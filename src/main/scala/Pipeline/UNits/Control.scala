@@ -4,14 +4,12 @@ import chisel3.util._
 
 class Control extends Module {
   val io = IO(new Bundle {
-    val opcode = Input(UInt(7.W)) // 7-bit opcode
-    val mem_write = Output(Bool()) //whether a write to memory
-
-    // Indicates whether a branch instruction is being executed
-    val branch = Output(Bool())
-    val mem_read = Output(Bool())  // whether a read from memory
-    val reg_write = Output(Bool())  // whether a register write
-    val men_to_reg = Output(Bool()) //whether the value written to a register (for load instructions)
+    val opcode = Input(UInt(7.W))         // 7-bit opcode
+    val mem_write = Output(Bool())        // whether a write to memory
+    val branch = Output(Bool())           // whether a branch instruction
+    val mem_read = Output(Bool())         // whether a read from memory
+    val reg_write = Output(Bool())        // whether a register write
+    val men_to_reg = Output(Bool())       // whether the value written to a register (for load instructions)
     val alu_operation = Output(UInt(3.W))
     val operand_A = Output(UInt(2.W))  // Operand A source selection for the ALU
     val operand_B = Output(Bool()) // Operand B source selection for the ALU
