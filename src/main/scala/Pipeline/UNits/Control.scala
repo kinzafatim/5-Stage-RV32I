@@ -11,6 +11,8 @@ class Control extends Module {
     val reg_write = Output(Bool())        // whether a register write
     val men_to_reg = Output(Bool())       // whether the value written to a register (for load instructions)
     val alu_operation = Output(UInt(3.W))
+    val FPU_en = Output(Bool())
+    val FPU_operation = Output(UInt(3.W))
     val operand_A = Output(UInt(2.W))  // Operand A source selection for the ALU
     val operand_B = Output(Bool()) // Operand B source selection for the ALU
 
@@ -24,6 +26,8 @@ class Control extends Module {
   io.reg_write := 0.B
   io.men_to_reg := 0.B
   io.alu_operation := 0.U
+  io.FPU_en := 0.B
+  io.FPU_operation := 0.U
   io.operand_A := 0.U
   io.operand_B := 0.B
   io.extend := 0.U
@@ -155,5 +159,43 @@ class Control extends Module {
       io.extend := 2.U
       io.next_pc_sel := 0.U
     }
+
+    // for RV32F/RV32D
+    // R-type instructions (opcode = 0b1010011)
+    is(83.U) {
+      io.mem_write := 0.B
+      io.branch := 0.B
+      io.mem_read := 0.B
+      io.reg_write := 1.B
+      io.men_to_reg := 0.B
+      io.FPU_en := 1.B
+      io.FPU_operation := 1.U
+      io.operand_A := 0.U
+      io.operand_B := 0.B
+      io.extend := 0.U
+      io.next_pc_sel := 0.U
+    }
+
+    //R4-type instructions
+    //fmadd
+    is(67.U){
+
+    }
+
+    //I-type instructions
+    //flw
+    is(7.U){
+
+    }
+
+    is(115.U){
+
+    }
+
+    //S-type instructions
+    is(39.U){
+
+    }
+
   }
 }
